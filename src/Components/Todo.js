@@ -10,6 +10,9 @@ const  Todo =(props)=>{
         setModalOpen(true)
         
     }
+    function ClearModal(){
+        setModalOpen(false)
+    }
     
 
     return (
@@ -23,8 +26,9 @@ const  Todo =(props)=>{
                 </di>
 
             </div>
-            { modalOpen ? <Backdrop /> : null}
-            { modalOpen ? <Modal /> : null}
+            { modalOpen && <Backdrop backdropClick={ClearModal} />}
+            
+            { modalOpen && <Modal/>}
        
         </> 
     )
