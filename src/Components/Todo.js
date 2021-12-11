@@ -18,7 +18,7 @@ const  Todo =(props)=>{
 
             <div className={classes.card}>
                
-                <h4>{props.text}</h4>
+                <h2>{props.text}</h2>
                 <di className={classes.actions}>
                     <button className={classes.btn} onClick={deleteTodo}>Delete</button>
                 </di>
