@@ -10,9 +10,6 @@ function App() {
           <Todo text='Learn React' />
           <Todo  text='Explore Firebase' />
           <Todo  text='Master React'/>
-      
-  
-        
         </Route>
 
       </Switch>

@@ -6,15 +6,13 @@ import Backdrop from './Backdrop';
 const  Todo =(props)=>{
     const [modalOpen, setModalOpen] = useState(false);
 
-    function deleteHandler(){
+    function deleteTodo(){
         setModalOpen(true)
         
     }
-    function ClearModal(){
+    function closeModalPopUp(){
         setModalOpen(false)
     }
-    
-
     return (
         <>
 
@@ -22,13 +20,14 @@ const  Todo =(props)=>{
                
                 <h4>{props.text}</h4>
                 <di className={classes.actions}>
-                    <button className={classes.btn} onClick={deleteHandler}>Delete</button>
+                    <button className={classes.btn} onClick={deleteTodo}>Delete</button>
                 </di>
-
-            </div>
-            { modalOpen && <Backdrop backdropClick={ClearModal} />}
             
-            { modalOpen && <Modal/>}
+            </div>
+
+            { modalOpen && <Backdrop backdropClick={closeModalPopUp} />}
+
+            { modalOpen && <Modal onCancel={closeModalPopUp} onConfirm={closeModalPopUp}/>}
        
         </> 
     )
