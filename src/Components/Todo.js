@@ -1,8 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 import classes from './todo.module.css';
+import Modal from './Modal';
+import Backdrop from './Backdrop';
 
 const  Todo =(props)=>{
+    const [modalOpen, setModalOpen] = useState(false);
+
     function deleteHandler(){
+        setModalOpen(true)
         
     }
     
@@ -18,6 +23,8 @@ const  Todo =(props)=>{
                 </di>
 
             </div>
+            { modalOpen ? <Backdrop /> : null}
+            { modalOpen ? <Modal /> : null}
        
         </> 
     )
