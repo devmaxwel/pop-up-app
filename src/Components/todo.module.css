@@ -5,7 +5,7 @@
   body {
     font-family: sans-serif;
     margin: 3rem;
-    background-color: #dfdfdf;
+    background-color: #f08726;
   }
   
   h1, h2 {
@@ -21,6 +21,7 @@
     color: white;
     border: 1px solid #800040;
     margin: 0 1rem;
+ 
   }
   
   .btn:hover {
@@ -28,12 +29,12 @@
     border-color: #9c1458;
   }
   
-  .btn--alt {
+  .btnalt {
     background-color: transparent;
     color: #800040;
   }
   
-  .btn--alt:hover {
+  .btnalt:hover {
     background-color: #f8dae9;
   }
   
@@ -41,8 +42,9 @@
     background-color: white;
     border-radius: 4px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
+    padding: 1.5rem;
     width: 20rem;
+    margin: 25px;
   }
   
   .actions {
@@ -56,7 +58,7 @@
     padding: 1rem;
     text-align: center;
     width: 30rem;
-    z-index: 10;
+    z-index: 999;
     position: fixed;
     top: 20vh;
     left: calc(50% - 15rem);

@@ -1,12 +1,25 @@
 import React from 'react'
 import classes from './todo.module.css';
 
-function Todo() {
+const  Todo =(props)=>{
+    function deleteHandler(){
+        
+    }
+    
+
     return (
-        <div className={classes.card}>
-            <h1>Todo App</h1>
-            <h4>Learn React</h4>
-        </div>
+        <>
+
+            <div className={classes.card}>
+               
+                <h4>{props.text}</h4>
+                <di className={classes.actions}>
+                    <button className={classes.btn} onClick={deleteHandler}>Delete</button>
+                </di>
+
+            </div>
+       
+        </> 
     )
 }
 
